@@ -68,18 +68,68 @@ function sumMatrix(matrix) {
 }
 
 function rowSum(matrix) {
+    const rowsum = [];
+    for (i = 0; i < matrix.length; i++) {
+        let rowtotal = 0;
+        for (const val of matrix[i]) {
+            rowtotal += val;
+        }
+        rowsum.push(rowtotal)
+    }
+    console.log(rowsum);
+    return rowsum;
 }
 
 function colSum(matrix) {
+    const columnsum = [];
+    for (j = 0; j < matrix.length; j++) {
+        let columntotal = 0;
+        for (i = 0; i < matrix.length; i ++) {
+            columntotal += matrix[i][j];
+        }
+        columnsum.push(columntotal)
+    }
+    console.log(columnsum);
+    return columnsum;
 }
 
 function countZeros(matrix) {
+    let zeros = 0;
+    for (i = 0; i < matrix.length; i++) {
+        for ( j = 0; j < matrix.length; j++) {
+            if (matrix[i][j] === 0) {
+                zeros++;
+            }
+        }
+    }
+    console.log(zeros);
+    return zeros;
 }
 
 function minValue2D(matrix) {
+    let minnum = Infinity;
+    for (i = 0; i < matrix.length; i++) {
+        for (j = 0; j < matrix.length; j++) {
+            if (matrix[i][j] < minnum) {
+                minnum = matrix[i][j];
+            }
+        }
+    }
+    console.log(minnum);
+    return minnum;
 }
 
 function maxValue2D(matrix) {
+    let maxnum = null;
+    for (i = 0; i < matrix.length; i++) {
+        for (j = 0; j < matrix.length; j++) {
+            if (matrix[i][j] > maxnum) {
+                maxnum = matrix[i][j];
+            }
+        }
+    }
+    console.log(maxnum);
+    return maxnum;
 }
 
 function doubleMatrix(matrix) {
