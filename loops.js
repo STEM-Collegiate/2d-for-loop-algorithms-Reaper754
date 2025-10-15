@@ -133,13 +133,49 @@ function maxValue2D(matrix) {
 }
 
 function doubleMatrix(matrix) {
+    for (i = 0; i < matrix.length; i++) {
+        for (j = 0; j < matrix.length; j++) {
+            matrix[i][j] *= 2;
+        }
+    }
+    console.log(matrix);
+    return matrix;
 }
 
 function positiveMap(matrix) {
+    const value = [];
+    for (i = 0; i < matrix.length; i++) {
+        let pos = true;
+        let neg = false;
+        const yesno = []
+        for (const val of matrix[i]){
+             if (val > 0) {
+                yesno.push(pos);
+            }
+            else {
+                yesno.push(neg);
+            }
+        } 
+        value.push(yesno);
+    }
+    console.log(value);
+    return value;
 }
 
 function diagonalSum(matrix) {
+   let disum = 0;
+   for (i = 0; i < matrix.length; i++) {
+    for (j = 0; j < matrix.length; j++) {
+        if (i === j) {
+            disum += matrix[i][j];
+        }
+    }
+   }
+   console.log(disum);
+   return disum;
 }
 
 function transposeMatrix(matrix) {
+    const newrow = []
+    
 }
