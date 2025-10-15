@@ -177,5 +177,10 @@ function diagonalSum(matrix) {
 
 function transposeMatrix(matrix) {
     const newrow = []
-    
+    for (j = 0; j < matrix.length; j++) {
+        const newcolumn = []
+        for (i = 0; i < matrix.length; i++) {
+            
+        }
+    }
 }
