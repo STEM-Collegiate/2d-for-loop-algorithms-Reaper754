@@ -176,11 +176,14 @@ function diagonalSum(matrix) {
 }
 
 function transposeMatrix(matrix) {
-    const newrow = []
+    const newrow = [];
     for (j = 0; j < matrix.length; j++) {
-        const newcolumn = []
+        const setup = [];
         for (i = 0; i < matrix.length; i++) {
-            
+           setup.push(matrix[i][j]);
         }
+        newrow.push(setup);
     }
+    console.log(newrow);
+    return newrow;
 }
